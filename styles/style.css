@@ -40,7 +40,9 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--gray-900);
+    background: var(--gray-900);background-image: url('../images/Color.svg'); 
+    background-size:cover;
+    background-position: center; 
     font-family: 'Vazirmatn', sans-serif;
     font-size: 16px;
     color: #fff;
@@ -130,8 +132,8 @@ p, h1, h2, h3, h4, h5 ,h6 {
 }
 
 .logo {
-    height: 180px;
-    width: 180px;
+    height: 160px;
+    width: 160px;
 }
 
 .nav-buttons > .button {
@@ -1070,6 +1072,40 @@ p, h1, h2, h3, h4, h5 ,h6 {
     max-width: 300px; /* Максимальная ширина */
 }
 
-.our-plans-item{
-    padding: 100%;
+.trainer-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.our-trainers-item .top {
+    height: 330px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.our-trainers-item:hover .top {
+    transform: scale(1.1); /* Увеличиваем только фон при наведении */
+}
+.trainer-link {
+    display: block; /* Ссылка оборачивает весь контент */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Наследуем цвет */
+}
+.our-trainers-item {
+    position: relative;
+    overflow: hidden; /* Убедимся, что нет обрезания */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.our-trainers-item:hover {
+    transform: scale(1.05); /* Эффект увеличения всей карточки */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.our-trainers-item .bottom {
+    padding: 1em;
+    text-align: center;
+    background-color: #1d1d1d;
+    color: white;
 }
