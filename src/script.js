@@ -124,4 +124,13 @@ fetch('https://example.com/api/auth', {
     console.error('Ошибка:', error);
     alert('Произошла ошибка. Попробуйте позже.');
 });
+document.querySelectorAll('.trainer-link').forEach(link => {
+    link.addEventListener('click', event => {
+        const href = link.getAttribute('href');
+        if (!href || href === '#') {
+            event.preventDefault();
+            alert('Страница тренера в разработке.');
+        }
+    });
+});
 
